@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Satoshi", sans-serif;
+}
+
+.hover-line::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #a855f7, #4f46e5);
+  transition: width 1s ease-in-out;
+}
+.hover-line:hover::after {
+  width: 100%;
+}
+
+.hover-lines::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(to right, #a855f7, #4f46e5);
+  transition: width 1s ease-in-out;
+}
+.hover-lines:hover::after {
+  width: 145px;
+}
+
+.text-with-icon::before {
+  content: "\f72e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  font-size: 24px;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) transparent;
+}
+
+.gradient-border {
+  border: 2px solid transparent;
+  border-image-source: linear-gradient(90deg, rgba(189, 0, 255, 0) 1.52%, rgba(189, 0, 255, 0.356) 51.61%, rgba(189, 0, 255, 0) 100%);
+  border-image-slice: 1;
+}
